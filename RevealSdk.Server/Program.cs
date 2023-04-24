@@ -42,16 +42,13 @@ var app = builder.Build();
 //    app.UseSwaggerUI();
 //}
 
+app.UseCors("AllowAll");
+
 app.UseSwagger();
 app.UseSwaggerUI();
 
 
 app.UseHttpsRedirection();
-
-//if (app.Environment.IsDevelopment())
-//{
-    app.UseCors("AllowAll");
-//}
 
 app.UseAuthorization();
 
